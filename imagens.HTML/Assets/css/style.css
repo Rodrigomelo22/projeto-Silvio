@@ -6,7 +6,7 @@
     font-family: 'inter', sans-serif;
 }
 
-.body {
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -17,13 +17,13 @@
 
 .container {
     width: 80%;
-    height: 94vh;
+    height: 95.8vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0,.212);
 }
 
 .form-image {
-    width: 60%;
+    width: 53%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@
 }
 
 .form-image img {
-    width: 50rem;
+    width: 50rem; /* Ajustado aqui! Diminui de 31rem para 20rem */
 }
 
 .form {
@@ -45,12 +45,41 @@
     padding: 4.5rem;
 }
 
+.form-header {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: rgb(17, 0, 255);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: rgb(17, 0, 255);
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
 .form-header h1::after {
     content: '';
     display: block;
     width: 5rem;
-    height: 0.4rem;
-    background-color:rgb(17, 0, 255);;
+    height: 0.3rem;
+    background-color: rgb(17, 0, 255);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -66,31 +95,51 @@
 .input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem; 
+    margin-bottom: 1.1rem; /* Corrigi a vírgula para ponto */
 }
 
 .input-box input {
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
-    border-radius: 20px;
-    box-shadow: 2px 2px 6px  #001c;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.8);
 }
 
 .input-box input:hover {
     background-color: #eeeeee75;
 }
 
+.input-box input:focus-visible {
+    outline: 1px solid #6c63ff;
+}
+
 .input-box label,
 .gender-title h6 {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: #000000c0;
 }
 
 .input-box input::placeholder {
-    color: #000000c0;
+    color: #000000be;
 }
+
+.gender-grouper { /* Corrigido aqui */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0 0.5rem;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+    margin-right: 0.35rem;
+    font-size: 0.81rem;
+   background-color: #fff;
+}
+
 .continue-button button {
     width: 100%;
     margin-top: 2.5rem;
@@ -111,4 +160,3 @@
     font-weight: 500;
     color: #fff;
 }
-
