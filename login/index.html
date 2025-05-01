@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Login</title>
 </head>
 <body>
-<script src="script.js"></script>
-<div class="container">
-    <div class="form-image">
-       <img src="liglig cell.png">
-       
-    </div>
+  <main class="container">
+    <section class="form-image">
+      <img src="liglig cell.png" alt="Ilustração de celular" />
+    </section>
 
-    <div class="form">
-        <form action="#">
-            <div class="form-header">
-                <div class="title">
-                    <h1>Login</h1 required>
-                </div>
+    <section class="form">
+      <form>
+        <div class="form-header">
+          <h1>Login</h1>
+        </div>
 
-            </div>
+        <div class="input-group">
+          <div class="input-box">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" placeholder="Digite seu email" required />
+          </div>
 
-    <div class="input-group">
-        <div class="input-box">
-            <label>Digite o Usuário:</label><br><i class="bi bi-backspace-fill"></i>
-            <input type="text" placeholder="Email:" required>
+          <div class="input-box">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" required />
+          </div>
+        </div>
 
-<div class="input-box">
-    <label>Digite a sua senha:</label><br>
-    <input type="password" placeholder="Senha:" required>
-</div>
-<div class="continue-button">
-  <button><a href="#">continuar</a></button>
-</div>
+        <div class="continue-button">
+          <button type="submit">Continuar</button>
+        </div>
+
+        <div class="clear-button">
+          <button type="reset">Limpar Tela</button>
+        </div>
       </form>
-  </div>
-</div>
-
+    </section>
+  </main>
 </body>
 </html>

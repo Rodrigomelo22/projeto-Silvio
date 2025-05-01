@@ -1,114 +1,147 @@
-
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'inter', sans-serif;
-}
-
-.body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
     background-color: antiquewhite;
-}
-
-.container {
-    width: 80%;
-    height: 94vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0,.212);
-}
-
-.form-image {
-    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 248, 240);
     padding: 1rem;
-}
-
-.form-image img {
-    width: 50rem;
-}
-
-.form {
-    width: 50%;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .form-image {
+    flex: 1;
+    background-color: #fff8f0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+  }
+  
+  .form-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .form {
+    flex: 1;
+    background-color: #f0f2f4;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    background-color: rgb(240, 242, 244);
-    padding: 4.5rem;
-}
-
-.form-header h1::after {
+  }
+  
+  .form-header h1 {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-header h1::after {
     content: '';
     display: block;
-    width: 5rem;
-    height: 0.4rem;
-    background-color:rgb(17, 0, 255);;
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
-}
-
-.input-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem 0;
-}
-
-.input-box {
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #1100ff;
+    border-radius: 5px;
+    margin: 0.5rem auto 0 auto;
+  }
+  
+  .input-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem; 
-}
-
-.input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
+    gap: 1.2rem;
+  }
+  
+  .input-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-box label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  .input-box input {
+    padding: 0.8rem 1rem;
     border: none;
     border-radius: 20px;
-    box-shadow: 2px 2px 6px  #001c;
-}
-
-.input-box input:hover {
-    background-color: #eeeeee75;
-}
-
-.input-box label,
-.gender-title h6 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #000000c0;
-}
-
-.input-box input::placeholder {
-    color: #000000c0;
-}
-.continue-button button {
+    box-shadow: 1px 1px 5px #001c;
+    background-color: #fff;
+    font-size: 1rem;
+  }
+  
+  .input-box input:focus {
+    outline: 2px solid #1100ff;
+  }
+  
+  .input-box input::placeholder {
+    color: #aaa;
+  }
+  
+  .continue-button,
+  .clear-button {
+    margin-top: 1.5rem;
+  }
+  
+  .continue-button button,
+  .clear-button button {
     width: 100%;
-    margin-top: 2.5rem;
+    background-color: #1100ff;
+    color: white;
+    padding: 0.8rem;
+    font-size: 1rem;
     border: none;
-    background-color: rgb(17, 0, 255);
-    padding: 0.62rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-}
-
-.continue-button button:hover {
-    background-color: rgb(17, 0, 255);
-}
-
-.continue-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
-}
-
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .clear-button button {
+    background-color: #444;
+    margin-top: 0.8rem;
+  }
+  
+  .continue-button button:hover {
+    background-color: #0000cc;
+  }
+  
+  .clear-button button:hover {
+    background-color: #222;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .form-image {
+      display: none;
+    }
+  
+    .form {
+      padding: 2rem 1rem;
+    }
+  }
